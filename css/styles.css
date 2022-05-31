@@ -1,9 +1,27 @@
 body {
-    background-color: #ffe69a
+    background-color: #FEFBE7
 }
 hr {
     border-style: none;
     width: 10%;
     /* only the top line is styled */
-    border-top: 7px dotted white;
+    border-top: 7px dotted #F9EBC8;
+}
+h1 {
+    color: #A97155;
+}
+h3 {
+    color: #A97155;
+}
+h2 {
+    color: #A97155;
+}
+p {
+    color: #BE8C63;
+}
+ol {
+    color: #BE8C63;
+}
+label {
+    color: #BE8C63;
 }
