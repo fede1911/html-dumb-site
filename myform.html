@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+
+    #namirial__click-wrap {
+	 width: 441px;
+	 height: auto;
+	 background-color: #fff;
+	 border: 1px solid #eceded;
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: flex-start;
+	 flex-direction: column;
+}
+#namirial__click-wrap .namirial-cw__header {
+  border-bottom: 1px solid #eceded;
+  width: 100%;
+  padding: 8px 20px;
+}
+ #namirial__click-wrap .namirial-cw__header h5 {
+	 color: #25464c;
+}
+ #namirial__click-wrap .namirial-cw__body {
+	 padding: 10px 11px;
+}
+ #namirial__click-wrap .namirial-cw__body a {
+	 margin-left: 8px;
+	 color: #188483;
+}
+ #namirial__click-wrap .namirial-cw__field-group {
+	 position: relative;
+}
+ #namirial__click-wrap .namirial-cw__field-group input {
+	 opacity: 0;
+	 position: relative;
+	 left: 12px;
+	 top: 17px;
+}
+ #namirial__click-wrap .namirial-cw__field-group label {
+	 cursor: pointer;
+	 color: #6b6f70;
+	 opacity: 1;
+	 display: grid;
+	 grid-template-columns: 9.8% 90.2%;
+	 align-items: center;
+}
+ #namirial__click-wrap .namirial-cw__field-group label span {
+	 width: 18px;
+	 height: 18px;
+	 border-radius: 0;
+	 border: 3px solid #b5b7b7;
+	 margin-left: 10px;
+	 margin-right: 12px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: row;
+   transition: all 0.2s ease;
+}
+ #namirial__click-wrap .namirial-cw__field-group label span::after {
+	 content: "";
+	 display: block;
+	 height: 8px;
+	 width: 8px;
+	 background-color: #b5b7b7;
+	 opacity: 0;
+}
+ #namirial__click-wrap .namirial-cw__field-group input:checked ~ label span::after {
+	 opacity: 1;
+}
+ #namirial__click-wrap .namirial-cw__footer {
+	 width: 100%;
+	 padding: 10px 20px;
+	 display: flex;
+	 justify-content: flex-end;
+	 align-items: center;
+	 flex-direction: row;
+}
+ #namirial__click-wrap .namirial-cw__footer span {
+	 color: #6b6f70;
+}
+ #namirial__click-wrap .namirial-cw__footer img {
+	 width: 89px;
+	 height: 24px;
+}
+
+
+  </style>
+
+
+</head>
+<body>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <label for="notNotharized">io non verrò notarizzato</label><br>
+  <input type="text" id="notNotharized" name="notNotharized" value="Write"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<!\-- HTML wrapper for rendering --\>
+<div id="namirial__click-wrap"></div>
+
+<!-- Initialization of the agreement snippet -->
+
+<script type="module">
+
+/*  Javascript library for business logic  */
+
+import {clickWrap} from 'https://clickwrap-demo.namirial.app/namirial_library/namirial_wrap.js';
+
+clickWrap.render({
+    enviroment: "production",
+    cwGuid: 'cf1fc2f5-c1bf-43ea-93c8-ae878c478d56',
+    version:'',
+    customValidation:'browser',
+    messaggeValidation: "Your Custom message",
+    CSSclassesList: ['css_class_1','css_class_2','css_class_N']
+},
+'#namirial__click-wrap');
+</script>
+
+</body>
+</html>
