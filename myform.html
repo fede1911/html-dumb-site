@@ -148,8 +148,9 @@
       // Should be triggered on form submit
       console.log('hi');
       let externalId="a.bisello@namirial.com";
-      clickWrap.sendingConsents(externalId);
-      console.log("consenso inviato")
+      clickWrap.sendingConsents(externalId).then(response => console.log('bene'))
+        .catch(err => console.log('errore'))
+      console.log("promise eseguita")
     })
   });
 
