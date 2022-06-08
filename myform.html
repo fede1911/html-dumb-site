@@ -94,7 +94,7 @@
 
 </head>
 <body>
-<form>
+<form id="myform">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value=""><br>
   <label for="lname">Last name:</label><br>
@@ -117,9 +117,21 @@ import {clickWrap} from 'https://clickwrap-demo.namirial.app/namirial_library/na
 
 clickWrap.render({
     enviroment: "production",
-    cwGuid: 'cf1fc2f5-c1bf-43ea-93c8-ae878c478d56'
+    cwGuid: 'cf1fc2f5-c1bf-43ea-93c8-ae878c478d56',
+    customValidation:'browser'
 },
 '#namirial__click-wrap');
+
+const submitBtn=document.querySelector("<the submit button of your form>");
+
+const form=document.querySelector("#myform");
+const MyFormSubmitHandler=()=>{
+let externalId="a.bisello@namirial.com";
+clickWrap.sendingConsents(externalId);
+};
+
+submitBtn.addEventListener("click",MyFormSubmitHandler);
+
 </script>
 
 </body>
