@@ -127,7 +127,6 @@
     },
     '#namirial__click-wrap');
 
-  window.mioriferimento = clickWrap;
 
   const submitBtn=document.querySelector("#sbmButton");
 
@@ -148,7 +147,7 @@
       // Should be triggered on form submit
       console.log('hi');
       let externalId="a.bisello@namirial.com";
-      clickWrap.sendingConsents(externalId).then(response => console.log('bene'))
+      clickWrap.sendingConsents(externalId).then(response => console.log(response))
         .catch(err => console.log('errore'))
       console.log("promise eseguita")
     })
