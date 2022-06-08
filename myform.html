@@ -94,7 +94,11 @@
 
 </head>
 <body>
-<form id="myform">
+
+
+<!\-- HTML wrapper for rendering --\>
+<div id="namirial__click-wrap">
+  <form id="myform">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value=""><br>
   <label for="lname">Last name:</label><br>
@@ -104,8 +108,8 @@
   <input type="submit" value="Submit" id="sbmButton">
 </form>
 
-<!\-- HTML wrapper for rendering --\>
-<div id="namirial__click-wrap"></div>
+
+</div>
 
 <!-- Initialization of the agreement snippet -->
 
@@ -124,10 +128,13 @@ clickWrap.render({
 },
 '#namirial__click-wrap');
 
+window.mioriferimento = clickWrap;
+
 const submitBtn=document.querySelector("#sbmButton");
 
 const form=document.querySelector("#myform");
 const MyFormSubmitHandler=()=>{
+console.log("ho sentito il submit")
 let externalId="a.bisello@namirial.com";
 clickWrap.sendingConsents(externalId);
 };
