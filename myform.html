@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 
   <style>
 
-    #namirial__click-wrap {
-	 width: 441px;
-	 height: auto;
-	 background-color: #fff;
-	 border: 1px solid #eceded;
-	 display: flex;
-	 justify-content: space-between;
-	 align-items: flex-start;
-	 flex-direction: column;
-}
-#namirial__click-wrap .namirial-cw__header {
-  border-bottom: 1px solid #eceded;
-  width: 100%;
-  padding: 8px 20px;
-}
- #namirial__click-wrap .namirial-cw__header h5 {
-	 color: #25464c;
-}
- #namirial__click-wrap .namirial-cw__body {
-	 padding: 10px 11px;
-}
- #namirial__click-wrap .namirial-cw__body a {
-	 margin-left: 8px;
-	 color: #188483;
-}
- #namirial__click-wrap .namirial-cw__field-group {
-	 position: relative;
-}
- #namirial__click-wrap .namirial-cw__field-group input {
-	 opacity: 0;
-	 position: relative;
-	 left: 12px;
-	 top: 17px;
-}
- #namirial__click-wrap .namirial-cw__field-group label {
-	 cursor: pointer;
-	 color: #6b6f70;
-	 opacity: 1;
-	 display: grid;
-	 grid-template-columns: 9.8% 90.2%;
-	 align-items: center;
-}
- #namirial__click-wrap .namirial-cw__field-group label span {
-	 width: 18px;
-	 height: 18px;
-	 border-radius: 0;
-	 border: 3px solid #b5b7b7;
-	 margin-left: 10px;
-	 margin-right: 12px;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 flex-direction: row;
-   transition: all 0.2s ease;
-}
- #namirial__click-wrap .namirial-cw__field-group label span::after {
-	 content: "";
-	 display: block;
-	 height: 8px;
-	 width: 8px;
-	 background-color: #b5b7b7;
-	 opacity: 0;
-}
- #namirial__click-wrap .namirial-cw__field-group input:checked ~ label span::after {
-	 opacity: 1;
-}
- #namirial__click-wrap .namirial-cw__footer {
-	 width: 100%;
-	 padding: 10px 20px;
-	 display: flex;
-	 justify-content: flex-end;
-	 align-items: center;
-	 flex-direction: row;
-}
- #namirial__click-wrap .namirial-cw__footer span {
-	 color: #6b6f70;
-}
- #namirial__click-wrap .namirial-cw__footer img {
-	 width: 89px;
-	 height: 24px;
-}
+      #namirial__click-wrap {
+          width: 441px;
+          height: auto;
+          background-color: #fff;
+          border: 1px solid #eceded;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-direction: column;
+      }
+      #namirial__click-wrap .namirial-cw__header {
+          border-bottom: 1px solid #eceded;
+          width: 100%;
+          padding: 8px 20px;
+      }
+      #namirial__click-wrap .namirial-cw__header h5 {
+          color: #25464c;
+      }
+      #namirial__click-wrap .namirial-cw__body {
+          padding: 10px 11px;
+      }
+      #namirial__click-wrap .namirial-cw__body a {
+          margin-left: 8px;
+          color: #188483;
+      }
+      #namirial__click-wrap .namirial-cw__field-group {
+          position: relative;
+      }
+      #namirial__click-wrap .namirial-cw__field-group input {
+          opacity: 0;
+          position: relative;
+          left: 12px;
+          top: 17px;
+      }
+      #namirial__click-wrap .namirial-cw__field-group label {
+          cursor: pointer;
+          color: #6b6f70;
+          opacity: 1;
+          display: grid;
+          grid-template-columns: 9.8% 90.2%;
+          align-items: center;
+      }
+      #namirial__click-wrap .namirial-cw__field-group label span {
+          width: 18px;
+          height: 18px;
+          border-radius: 0;
+          border: 3px solid #b5b7b7;
+          margin-left: 10px;
+          margin-right: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          transition: all 0.2s ease;
+      }
+      #namirial__click-wrap .namirial-cw__field-group label span::after {
+          content: "";
+          display: block;
+          height: 8px;
+          width: 8px;
+          background-color: #b5b7b7;
+          opacity: 0;
+      }
+      #namirial__click-wrap .namirial-cw__field-group input:checked ~ label span::after {
+          opacity: 1;
+      }
+      #namirial__click-wrap .namirial-cw__footer {
+          width: 100%;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-direction: row;
+      }
+      #namirial__click-wrap .namirial-cw__footer span {
+          color: #6b6f70;
+      }
+      #namirial__click-wrap .namirial-cw__footer img {
+          width: 89px;
+          height: 24px;
+      }
 
 
   </style>
@@ -95,7 +95,7 @@
 </head>
 <body>
 
-  <form id="myform">
+<form id="myform">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value=""><br>
   <label for="lname">Last name:</label><br>
@@ -114,31 +114,40 @@
 
 <script type="module">
 
-/*  Javascript library for business logic  */
+  /*  Javascript library for business logic  */
 
-import {clickWrap} from 'https://clickwrap-demo.namirial.app/namirial_library/namirial_wrap.js';
+  import {clickWrap} from 'https://clickwrap-demo.namirial.app/namirial_library/namirial_wrap.js';
 
-clickWrap.render({
-    enviroment: "production",
-    cwGuid: 'cf1fc2f5-c1bf-43ea-93c8-ae878c478d56',
-    customValidation:'browser',
-    messaggeValidation: "sistema",
-    CSSclassesList: ['css_class_1','css_class_2','css_class_N']
-},
-'#namirial__click-wrap');
+  clickWrap.render({
+      enviroment: "production",
+      cwGuid: 'cf1fc2f5-c1bf-43ea-93c8-ae878c478d56',
+      customValidation:'browser',
+      messaggeValidation: "sistema",
+      CSSclassesList: ['css_class_1','css_class_2','css_class_N']
+    },
+    '#namirial__click-wrap');
 
-window.mioriferimento = clickWrap;
+  window.mioriferimento = clickWrap;
 
-const submitBtn=document.querySelector("#sbmButton");
+  const submitBtn=document.querySelector("#sbmButton");
 
-const form=document.querySelector("#myform");
-const MyFormSubmitHandler=()=>{
-console.log("ho sentito il submit")
-let externalId="a.bisello@namirial.com";
-clickWrap.sendingConsents(externalId);
-};
+  const form=document.querySelector("#myform");
+  const MyFormSubmitHandler=()=>{
+    console.log("ho sentito il submit")
+    let externalId="a.bisello@namirial.com";
+    clickWrap.sendingConsents(externalId);
+  };
 
-submitBtn.addEventListener("click",MyFormSubmitHandler);
+  submitBtn.addEventListener("click",MyFormSubmitHandler);
+
+  document.getElementById('#myform').onsubmit = function() {
+    /* do what you want with the form */
+
+    // Should be triggered on form submit
+    console.log('hi');
+    // You must return false to prevent the default form behavior
+    return false;
+  }
 
 </script>
 
