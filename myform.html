@@ -102,13 +102,19 @@
   <input type="text" id="lname" name="lname" value=""><br><br>
   <label for="notNotharized">io non verrò notarizzato</label><br>
   <input type="text" id="notNotharized" name="notNotharized" value="Write"><br><br>
+  
+  
+  <div id="namirial__click-wrap">
+
+</div>
+
+  
+  
+  
   <input type="submit" value="Submit" id="sbmButton">
 </form>
 
 <!\-- HTML wrapper for rendering --\>
-<div id="namirial__click-wrap">
-
-</div>
 
 <!-- Initialization of the agreement snippet -->
 
@@ -120,39 +126,41 @@
 
   clickWrap.render({
       enviroment: "production",
-      cwGuid: 'cf1fc2f5-c1bf-43ea-93c8-ae878c478d56',
-      customValidation:'browser',
+      cwGuid: 'cf1fc2f5-c1bf-43ea-93c8-ae878c478d56', 
       messaggeValidation: "sistema",
+	  customValidation: "browser",
       CSSclassesList: ['css_class_1','css_class_2','css_class_N']
     },
     '#namirial__click-wrap');
 
+const sbmButton = document.querySelector("#sbmButton");
+	
 
-  const submitBtn=document.querySelector("#sbmButton");
+ const SubmitFunction = (e) => { 
+      clickWrap.sendingConsents("a.bisello@namirial.com");
+    }
 
-  const form=document.querySelector("#myform");
-  const MyFormSubmitHandler=()=>{
-    console.log("ho sentito il submit")
-    let externalId="a.bisello@namirial.com";
-    clickWrap.sendingConsents(externalId);
-  };
+    sbmButton.addEventListener("click", SubmitFunction)
+  
 
-  submitBtn.addEventListener("click",MyFormSubmitHandler);
 
-  window.addEventListener("load", function() {
-    document.getElementById('myform').addEventListener("submit", function(e) {
-      e.preventDefault(); // before the code
-      /* do what you want with the form */
 
-      // Should be triggered on form submit
-      console.log('hi');
-      let externalId="a.bisello@namirial.com";
-      clickWrap.sendingConsents(externalId).then(response => console.log(response))
-        .catch(err => console.log('errore'))
-      console.log("promise eseguita")
-    })
-  });
-
+window.addEventListener(
+    "namirial-onError",
+    function (e) {
+      console.log(e.detail);
+    },
+    false
+  );
+window.addEventListener(
+"namirial-onApproved",
+function(e){
+console.log(e.detail);
+},
+false
+  );
+  
+  
 </script>
 
 </body>
